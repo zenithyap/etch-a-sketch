@@ -8,6 +8,11 @@ for (let i = 0; i < SIDES; i++) {
     for (let j = 0; j < SIDES; j++) {
         const gridSquare = document.createElement("div");
         gridSquare.classList.add("grid-square");
+
+        gridSquare.addEventListener('mouseover', () => {
+            gridSquare.classList.add("coloured");
+        });
+
         gridRow.appendChild(gridSquare);
     }
     container?.appendChild(gridRow);
