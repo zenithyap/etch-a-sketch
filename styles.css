@@ -1,35 +1,40 @@
-:root {
-    --square-length: 30px;
-    --grid-gap: 2px;
-}
-
 * {
     padding: 0;
     margin: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
+    font-family: "Gill Sans", sans-serif;
 }
 
 #container {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    gap: var(--grid-gap);
     justify-content: center;
     align-items: center;
 }
 
+#new-grid {
+    width: 700px;
+    height: 700px;
+}
+
 .grid-row {
     display: flex;
-    gap: var(--grid-gap);
 }
 
 .grid-square {
-    width: var(--square-length);
-    height: var(--square-length);
-    border: 2px solid black;
-    margin-bottom: 2px;
+    background-color: #add8e6;
 }
 
-.coloured {
+.grid-square.coloured {
     background-color: black;
+}
+
+#grid-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #a6c1ee;
+    margin-bottom: 20px;
 }
