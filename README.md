@@ -1,1 +1,3 @@
-# etch-a-sketch
+# Etch A Sketch
+Simple drawing pad!
+
