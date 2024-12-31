@@ -32,12 +32,21 @@ function removeGrid(gridId) {
     container?.removeChild(gridToRemove);
 }
 
+function promptGridSize() {
+    const sides = +prompt("Number of sides for the grid (max 100)", "16");
+    return sides;
+}
+
 newGrid(16);
 
 const customGridButton = document.querySelector("#grid-button");
 
 customGridButton?.addEventListener("click", () => {
-    const sides = +prompt("Number of sides for the grid", "16");
+    let sides = promptGridSize();
+    while (sides > 100) {
+        sides = promptGridSize();
+        sides = sides ? sides : 16;
+    }
     removeGrid("#new-grid");
     newGrid(sides);
 });
